@@ -108,7 +108,8 @@ func spaceOptimization(a, b string) int {
 			} else {
 				// here the if a[i] != b[j] so we have two options
 				// we can increment the i pointer and compare with whole j or
-				// we can increment the j pointer and compare with whole i. and store the max of both calls.
+				// we can increment the j pointer and compare
+				 with whole i. and store the max of both calls.
 				ans = int(math.Max(float64(next[j]), float64(curr[j+1])))
 			}
 			curr[j] = ans
