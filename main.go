@@ -25,9 +25,10 @@ import (
 // }
 
 func main() {
-	s1 := "ABACD"
-	s2 := "CDABA"
+	// arr := [][]string{{"phone", "blue", "pixel"}, {"computer", "silver", "phone"}, {"phone", "gold", "iphone"}}
+	// result := striing.CountMatchOptimse(arr, "type", "phone")
+	// fmt.Println("result===>", result)
 
-	ans := striing.StringRotationCheck(s1, s2)
-	fmt.Println("ans", ans)
+	// fmt.Println("result =>", striing.Anagram("aacc", "ccac"))
+	fmt.Println("LPS=>", striing.LongestCommonSubsequence("abcde", "abef"))
 }
