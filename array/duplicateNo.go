@@ -41,13 +41,13 @@ func MissingNumber(nums []int) int {
 	// }
 
 	//UPATED OF OPTIMISE SOLUTION.
-	fmt.Println(n)
-	for i := 0; i <= n+1; i++ {
+
+	for i := 0; i < n+1; i++ {
 		total += i
 		fmt.Println("show this", i, total)
 		if i < n {
 			current += nums[i]
-
+			fmt.Println(current)
 		}
 	}
 	return total - current

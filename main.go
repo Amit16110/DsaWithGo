@@ -1,10 +1,6 @@
 package main
 
-import (
-	"fmt"
-
-	"github.com/amit16110/DsawithGo/striing"
-)
+// "github.com/amit16110/DsawithGo/array"
 
 // func sliceToChannel(nums []int) <- chan int {
 // 	out := make(chan int)  // Unbuffered Channel
@@ -25,10 +21,6 @@ import (
 // }
 
 func main() {
-	// arr := [][]string{{"phone", "blue", "pixel"}, {"computer", "silver", "phone"}, {"phone", "gold", "iphone"}}
-	// result := striing.CountMatchOptimse(arr, "type", "phone")
-	// fmt.Println("result===>", result)
-
-	// fmt.Println("result =>", striing.Anagram("aacc", "ccac"))
-	fmt.Println("LPS=>", striing.LongestCommonSubsequence("abcde", "abef"))
+	arr := []int{1, 2, 3, 4, 5}
+	arr2 := []int{10, 9, 8, 7, 3}
 }
