@@ -1,3 +1,3 @@
 package searchandsort
 
-func Sqrt()
+// func Sqrt()

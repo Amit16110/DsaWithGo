@@ -1,6 +1,7 @@
 package dp
 
 import (
+	"fmt"
 	"math"
 )
 
@@ -8,10 +9,10 @@ import (
 
 // recursion based solution.
 func MaxSumNonAdjMain(arr []int) int {
-	// n := len(arr)
-	//TYPE 1 recursion based solution.
-	// ans := recSolve(arr, n-1)
-
+	n := len(arr)
+	// TYPE 1 recursion based solution.
+	ans := recSolve(arr, n-1)
+	return ans
 	// TYPE 2 RECURSION WITH MEMORISATION.
 	// step 1 => create dp arr.
 	// dp := []int{}
@@ -21,7 +22,7 @@ func MaxSumNonAdjMain(arr []int) int {
 
 	// TYPE 3 TABULATION METHOD.
 
-	return tabSolve(arr)
+	// return tabSolve(arr)
 }
 
 func tabSolve(arr []int) int {
@@ -40,7 +41,7 @@ func tabSolve(arr []int) int {
 
 		dp[i] = int(math.Max(float64(inc), float64(excl)))
 	}
-
+	fmt.Println("complete", dp)
 	return dp[n-1]
 }
 func memoSolve(arr, dp []int, n int) int {
@@ -83,7 +84,7 @@ func recSolve(arr []int, n int) int {
 	inc := recSolve(arr, n-2) + arr[n]
 	// exclude => jump 1 step but not inclue the current number.
 	exc := recSolve(arr, n-1) + 0
-
+	fmt.Println("inc, exc", inc, exc)
 	return int(math.Max(float64(inc), float64(exc)))
 
 }
