@@ -9,5 +9,5 @@ func LinkedListOperations(value int) {
 	linkedList := list.New()
 	linkedList.PushBack(value)
 
-	fmt.Println("LinkedList==>", linkedList.Front().List)
+	fmt.Println("LinkedList=from the winwork=>")
 }
