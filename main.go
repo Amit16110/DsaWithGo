@@ -4,6 +4,8 @@ import (
 	"fmt"
 
 	"github.com/amit16110/DsawithGo/array"
+
+	linkedlist "github.com/amit16110/DsawithGo/linkedList"
 )
 
 // "github.com/amit16110/DsawithGo/array"
@@ -45,4 +47,7 @@ func main() {
 	// stackandqueue.ReverseAString("amit")
 	result := array.Trapping([]int{0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1})
 	fmt.Println("result", result)
+	// fmt.Println("result>>", striing.EditDistance("horse", "ros"))
+	linkedlist.LinkedListOperations(10)
+
 }
