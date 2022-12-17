@@ -1,5 +1,7 @@
 package main
 
+import linkedlist "github.com/amit16110/DsawithGo/linkedList"
+
 // "github.com/amit16110/DsawithGo/array"
 
 // func sliceToChannel(nums []int) <- chan int {
@@ -21,6 +23,7 @@ package main
 // }
 
 func main() {
-	// fmt.Println("result>>", searchandsort.FindPages([]int{12, 34, 67, 90}, 2))
+	// fmt.Println("result>>", striing.EditDistance("horse", "ros"))
+	linkedlist.LinkedListOperations(10)
 
 }
