@@ -10,4 +10,5 @@ func LinkedListOperations(value int) {
 	linkedList.PushBack(value)
 
 	fmt.Println("LinkedList==>")
+	fmt.Println("LinkedList=from the winwork=>")
 }
