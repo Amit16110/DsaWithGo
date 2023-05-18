@@ -31,7 +31,7 @@ func SuffleOptime(s string, indices []int) string {
 
 	}
 
-	str := fmt.Sprintf("%s", bytes)
+	str := fmt.Sprintf("%x", bytes)
 
 	return str
 }

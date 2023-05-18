@@ -21,12 +21,14 @@ func CountAndSayHelper(str string) string {
 	count := 1
 
 	for i := 1; i < len(str); i++ {
+
 		if str[i] == str[i-1] {
 			count++
 		} else {
 			result.WriteString(strconv.Itoa(count))
 			result.WriteByte(str[i-1])
 			count = 1
+			fmt.Println("cehck", result.String())
 		}
 
 	}

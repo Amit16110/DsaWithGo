@@ -1,16 +1,42 @@
 package linkedlist
 
-import (
-	"container/list"
-	"fmt"
-)
+type Node struct {
+	value any
+	next  *Node
+}
 
-func LinkedListOperations(value int) {
-	linkedList := list.New()
-	linkedList.PushBack(value)
+type ListNode struct {
+	root *Node
+	len  int
+}
 
-	fmt.Println("LinkedList==>")
-	fmt.Println("LinkedList=from the winwork=>")
+// func (l *ListNode) init() *ListNode {
+// 	l.root.next = &l.root
+// 	l.len = 0
+// 	return l
+// }
+// func NewLinkedList() *ListNode {
+// 	return new(ListNode).init()
+// }
 
-	fmt.Println("Currently i'm not got at working in the file or golang I need to take this opportunity and did the work.")
+// func (l *ListNode) Front() *Node {
+// 	if l.len == 0 {
+// 		return nil
+// 	}
+// 	return l.root.next
+// }
+
+func (l *ListNode) insert(value any) *Node {
+	node := &Node{value: value}
+	if l.root == nil {
+		l.root = node
+	} else {
+		current := l.root
+
+		for current.next != nil {
+			current = current.next
+		}
+		current = current.next
+	}
+	return nil // just exammple for error
 }

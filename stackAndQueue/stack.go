@@ -12,7 +12,7 @@ type (
 )
 
 // create a new stack.
-func NewStack() *stack {
+func NewStacks() *stack {
 	return &stack{nil, 0}
 }
 
