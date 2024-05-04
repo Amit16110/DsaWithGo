@@ -1,6 +1,7 @@
 package array
 
 // ! NOT SOLVED YET BUT VERY IMPORTANT CONCEPT.
+// Todo Not solve yet cause don't !
 func sameprefixWithLongest(arr []string) {
 	// j := 1
 	for i := 0; i < len(arr); i++ {
