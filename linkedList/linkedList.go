@@ -1,42 +1,91 @@
 package linkedlist
 
+import (
+	"fmt"
+)
+
 type Node struct {
 	value any
 	next  *Node
 }
 
 type ListNode struct {
-	root *Node
-	len  int
+	head, tail *Node
+	len        int
 }
 
-// func (l *ListNode) init() *ListNode {
-// 	l.root.next = &l.root
-// 	l.len = 0
-// 	return l
-// }
-// func NewLinkedList() *ListNode {
-// 	return new(ListNode).init()
-// }
-
-// func (l *ListNode) Front() *Node {
-// 	if l.len == 0 {
-// 		return nil
-// 	}
-// 	return l.root.next
-// }
-
-func (l *ListNode) insert(value any) *Node {
+func (l *ListNode) insertFront(value any) {
 	node := &Node{value: value}
-	if l.root == nil {
-		l.root = node
+	if l.head == nil {
+		l.head = node
+		l.tail = node
+		l.len++
 	} else {
-		current := l.root
+		current := l.head
 
-		for current.next != nil {
-			current = current.next
-		}
+		node.next = current
+		l.head = node
+
+		l.len++
+	}
+}
+
+func (l *ListNode) insertBack(value any) {
+	node := &Node{value: value}
+
+	if l.head == nil {
+		l.head = node
+		l.tail = node
+		l.len++
+	} else {
+		curr := l.tail
+
+		curr.next = node
+		l.tail = node
+		l.len++
+	}
+}
+
+func (l *ListNode) reverse(head *Node) *Node {
+	var prev *Node
+	current := head
+
+	for current != nil {
+		next := current.next
+		current.next = prev
+		prev = current
+		current = next
+	}
+
+	return current
+}
+
+func (l *ListNode) reverseLL() {
+
+	if l.head == nil {
+		return
+	}
+
+	var prev *Node
+	current := l.head
+
+	for current != nil {
+		next := current.next
+		current.next = prev
+		prev = current
+		current = next
+	}
+	l.head = prev
+
+}
+
+func (l *ListNode) display() {
+	current := l.head
+
+	for current != nil {
+		fmt.Printf("%d ", current.value)
 		current = current.next
 	}
-	return nil // just exammple for error
+
+	fmt.Println()
 }

@@ -47,10 +47,3 @@ func TestTwoSum(t *testing.T) {
 
 	fmt.Println("result", result)
 }
-
-func TestConcurrenc(t *testing.T) {
-	// printWithWait()
-	// printWithChannel()
-	printWithChannelWithArg()
-	// betterSolution()
-}

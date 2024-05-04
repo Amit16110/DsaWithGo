@@ -31,3 +31,16 @@ func TestInterfaceTypeSecond(t *testing.T) {
 
 	TotalExpenses(employ)
 }
+
+func TestConcurrenc(t *testing.T) {
+	// printWithWait()
+	// printWithChannel()
+	printWithChannelWithArg()
+	// betterSolution()
+}
+
+func TestSyncWriteDataAtOneChacter(t *testing.T) {
+	changeOneVariableInSchronization()
+
+	callConPro()
+}

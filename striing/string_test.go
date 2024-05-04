@@ -20,3 +20,8 @@ func TestLS(t *testing.T) {
 	fmt.Println(" N", no)
 
 }
+func TestAtoi(t *testing.T) {
+	no := myAtoi("abc")
+	fmt.Println(no)
+
+}
